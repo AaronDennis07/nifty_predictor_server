@@ -6,6 +6,8 @@ import os
 from datetime import datetime
 from utils import read_csv_slice
 from services.predictor import run_prediction
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI(title="Market Data Feed API")
 

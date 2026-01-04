@@ -9,6 +9,14 @@ from services.predictor import run_prediction
 
 app = FastAPI(title="Market Data Feed API")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # or your frontend URL
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # ======================================================
 # FILE PATHS
 # ======================================================
